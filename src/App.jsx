@@ -7,7 +7,9 @@ function App() {
   const [numberAllowed,setNumberAllowed] = useState(false)
   const [charAllowed,setCharAllowed] =useState(false)
   const [password,setPassword] =useState(false)
-  
+  const handleSubmit = ()=>{
+    
+  }
   const passwordGenerator= useCallback(()=>{
     let pass = ''
     let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
@@ -28,6 +30,11 @@ function App() {
       value={password}
       className='outline-none w-full py-1 px-3'
       placeholder="Password"
+      readOnly/>
+      <input type="button"
+      onClick={handleSubmit}
+      className='outline-none w-full py-1 px-3'
+      placeholder="Click"
       readOnly/>
     </div>
    </div>
